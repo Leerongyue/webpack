@@ -8,6 +8,10 @@ module.exports = {
     // path: path.resolve(__dirname, "dist"),
     filename: "main.[contenthash].js"
   },
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist"
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: "李荣跃",
