@@ -1,8 +1,9 @@
+//development与production的共有属性
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  mode: "development",
   entry: "./src/main.js",
   output: {
     filename: "main.[contenthash].js"
@@ -17,13 +18,5 @@ module.exports = {
       filename: "index.html",
       template: "src/index.html"
     })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
-  }
+  ]
 };
