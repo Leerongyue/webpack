@@ -5,7 +5,7 @@ const div = document.getElementById("fuck");
 div.innerHTML = `<img src="${png}">`;
 
 const button = document.createElement("button");
-button.innerText = "我是懒加载";
+button.innerText = "我是懒加载哦";
 button.onclick = () => {
   const promise = import("./lazy.js");
   promise.then(
