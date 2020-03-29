@@ -1,25 +1,10 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
-
+const base = require("./webpack.config.base.js");
 module.exports = {
+  ...base,
   mode: "development",
-  entry: "./src/main.js",
-  output: {
-    filename: "main.[contenthash].js"
-  },
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist"
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "李荣跃",
-      filename: "index.html",
-      template: "src/index.html"
-    })
-  ],
   module: {
     rules: [
+      ...base.module.rules,
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
