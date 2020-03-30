@@ -1,6 +1,6 @@
 npm run build && 
 git checkout newBranch &&
-rm -rf *.html *.js *.css *.png *.json ./src &&
+rm -rf *.html *.js *.css *.png *.json &&
 mv dist/* ./ &&
 rm -rf dist
 git add . &&
