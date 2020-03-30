@@ -1,6 +1,6 @@
 npm run build && 
-git checkout gh-pages &&
-rm -rf *.html *.js *.css *.png &&
+git checkout newBranch &&
+rm -rf *.html *.js *.css *.png *.json *.sh &&
 mv dist/* ./ &&
 rm -rf dist
 git add . &&
